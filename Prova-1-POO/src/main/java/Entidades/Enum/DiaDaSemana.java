@@ -1,0 +1,5 @@
+package Entidades.Enum;
+
+public enum DiaDaSemana {
+    DOMINGO, SEGUNDA, TERCA, QUARTA, QUINTA, SEXTA, SABADO;
+}
