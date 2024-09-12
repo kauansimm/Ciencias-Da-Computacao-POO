@@ -46,7 +46,7 @@ public class IngressoCinema {
             }
             
             if (dia == dia.TERCA || dia == dia.QUARTA || dia == dia.QUINTA) {
-                return (valor * 0.5) - ((valor * 0.5) * 0.3);
+                return valor * 0.5;
             }
         } else {
             if (dia == dia.TERCA || dia == dia.QUARTA || dia == dia.QUINTA) {

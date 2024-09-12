@@ -108,13 +108,17 @@ public class Tela extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         IngressoCinema ingCin = new IngressoCinema();
         try {
-           DiaDaSemana dia = DiaDaSemana.valueOf(jTextFieldDia.getText().toUpperCase());
-           ingCin.setDia(dia);
-            if (jCheckBoxSim.isSelected()) {
-                ingCin.setEstudante(true);
-                jLabelValorFinal.setText("R$" + ingCin.precoCinema());
+            if (jTextFieldDia.getText().isEmpty()) {
+                ingCin.setDia(null);
             } else {
-                jLabelValorFinal.setText("R$" + ingCin.precoCinema());
+                DiaDaSemana dia = DiaDaSemana.valueOf(jTextFieldDia.getText().toUpperCase());
+                ingCin.setDia(dia);
+                if (jCheckBoxSim.isSelected()) {
+                    ingCin.setEstudante(true);
+                    jLabelValorFinal.setText("R$" + ingCin.precoCinema());
+                } else {
+                    jLabelValorFinal.setText("R$" + ingCin.precoCinema());
+                }
             }
         } 
         catch (Exception e) {
